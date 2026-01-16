@@ -1,212 +1,533 @@
-<!DOCTYPE html>
-<html lang="fi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elisa Valtonen</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Charm:wght@400;700&family=Dancing+Script:wght@400..700&family=Doto:wght@100..900&family=Exo:ital,wght@0,100..900;1,100..900&family=Jim+Nightshade&family=Marck+Script&family=Parisienne&family=Quintessential&family=Sacramento&family=Smooch+Sans:wght@100..900&family=Splash&family=Syne+Mono&family=Waiting+for+the+Sunrise&family=Waterfall&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Header -->
-    <header>
-      <div class="container">
-        <div class="header-content">
-          <div class="logo">Elisa<span>Valtonen</span></div>
-          <nav>
-            <div class="mobile-menu">☰</div>
-            <ul>
-              <li><a href="#top">Top</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+/* Perusasetukset */
+:root {
+  --dark-bg: #1a1a2e;
+  --darker-bg: #0f0f1a;
+  --pink-primary: #e83e8c;
+  --pink-secondary: #ff69b4;
+  --pink-light: #ffb6c1;
+  --text-light: #f8f9fa;
+  --text-muted: #adb5bd;
+}
 
-    <!-- Top-osio -->
-    <section class="hero" id="top">
-      <div class="container">
-        <h1>Hello, I'm Elisa Valtonen</h1>
-        <p>ICT Engineering Student & Cybersecurity Enthusiast</p>
-        <a href="#projects" class="btn">View My Projects</a>
-      </div>
-    </section>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo", "Syne Mono", "Waterfall", "Lucida Sans Unicode", Verdana,
+    sans-serif;
+}
 
-    <!-- About-osio -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="section-title">
-          <h2>About Me</h2>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
-            <p>
-              I have worked in the health sector over 15 years, in both the
-              public and private sectors. My previous education is paramedic,
-              graduated from a university of applied sciences. I have noticed
-              that cybersecurity roles have surprisingly many similarities to my
-              work in health care and emergency services. Such as documentation
-              and reporting, as well as monitoring work.
-            </p>
-            <p>
-              I am currently working on digital health. Before studying ICT
-              engineering, I studied law for a while.
-            </p>
-            <p>
-              I am interested in combining raw data with various artificial
-              intelligence solutions and developing different operating models,
-              for example in cybersecurity and in other forms of data-driven
-              modeling.
-            </p>
-          </div>
-          <div class="about-image">
-            <img src="Pics/kuvani.jpeg" alt="My picture" />
-          </div>
-        </div>
-      </div>
-    </section>
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  line-height: 1.6;
+  overflow-x: hidden; /* Estää sivuttaista vieritystä */
+}
 
-    <!-- Projects-osio -->
-    <section class="projects" id="projects">
-      <div class="container">
-        <div class="section-title">
-          <h2>My Projects</h2>
-          <p>Here you can find some of my projects</p>
-        </div>
-        <div class="projects-grid">
+/* Fontit */
+h1 {
+  font-family: "Doto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "ROND" 0;
+}
 
-                  <!-- Kortti -->
-          <div class="project-card">
-            <img
-              src="Pics/logo1.jpeg"
-              alt="Website Icon"
-              class="project-icon"
-            />
-            <h3>My website</h3>
-            <p>Feel free to explore the source code of the site.</p>
-          </div>
+h2 {
+  font-family: "Syne Mono", monospace;
+  font-weight: 400;
+}
 
-    <!--Kortti-->
-          <div class="project-card">
-            <img
-              src="Pics/machine.png"
-              alt="Machine learning Icon"
-              class="project-icon"
-            />
-            <h3>Basics of data-analyst and machine learning</h3>
-            <p>Here are a few exercises from the course.</p>
-            <a href="https://github.com/iRobbe/projects/tree/main/Data-analytiikka%20ja%20tekoa%CC%88ly" target="_blank" class="btn">View Details</a>
-          </div>
+.hero p {
+  font-family: "Exo", sans-serif;
+}
 
-              <!--Kortti-->
-          <div class="project-card">
-            <img
-              src="Pics/thmlogocustom.jpg"
-              alt="TryHackMe Icon"
-              class="project-icon"
-            />
-            <h3>Try Hack Me</h3>
-            <p>Here you can find my Try Hack Me profile etc</p>
-            <a href="https://tryhackme.com/p/iRobbe" target="_blank" class="btn"
-              >View Details</a
-            >
-          </div>
-              <!--Kortti-->
-          <div class="project-card">
-            <img
-              src="Pics/machine.png"
-              alt="Machine learning Icon"
-              class="project-icon"
-            />
-            <h3>My first Chatbot</h3>
-            <p>I build my own basic Chatbot</p>
-            <a href="https://github.com/iRobbe/projects/blob/main/main.py" target="_blank" class="btn"
-              >View Details</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+.about-text p {
+  font-family: "Exo", sans-serif;
+  font-size: 18px;
+}
 
-    <!-- Contact-osio -->
-    <section class="contact" id="contact">
-      <div class="container">
-        <div class="section-title">
-          <h2>Get In Touch</h2>
-          <p>You can contact me via LinkedIn.</p>
-          <div class="location-info">
-            <span class="location-icon">📍</span>
-            <span class="location-label">Location:</span>
-            <span class="location-text">Finland</span>
-          </div>
-          <div class="social-links-centered">
-            <a href="https://www.linkedin.com/in/elisa-valtonen-74236633a/"
-            target="_blank"
-            rel="noopener norefrrer">
-              <img
-                src="Pics/linkkari_logo.jpg"
-                alt="LinkedIn"
-                class="social-icon"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+a {
+  text-decoration: none;
+  color: var(--pink-light);
+  transition: color 0.3s ease;
+}
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <div class="logo">Elisa<span>Valtonen</span></div>
-          <p>&copy; 2025 Elisa Valtonen. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+a:hover {
+  color: var(--pink-primary);
+}
 
-    <script>
-  // Mobiilivalikon toggle
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu');
-    const navMenu = document.querySelector('nav ul');
-    
-    if (mobileMenuBtn) {
-      mobileMenuBtn.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
-        // Vaihdetaan hamburger-ikoni
-        if (navMenu.classList.contains('show')) {
-          this.textContent = '✕';
-        } else {
-          this.textContent = '☰';
-        }
-      });
-    }
-    
-    // Suljetaan valikko kun linkkiä klikataan
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        navMenu.classList.remove('show');
-        mobileMenuBtn.textContent = '☰';
-      });
-    });
-    
-    // Suljetaan valikko kun klikataan muualla
-    document.addEventListener('click', function(event) {
-      if (!event.target.closest('nav') && navMenu.classList.contains('show')) {
-        navMenu.classList.remove('show');
-        mobileMenuBtn.textContent = '☰';
-      }
-    });
-  });
-</script>
-  </body>
-</html>
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(
+    135deg,
+    var(--pink-primary),
+    var(--pink-secondary)
+  );
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(232, 62, 140, 0.3);
+}
+
+/* Header */
+header {
+  background-color: var(--darker-bg);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--pink-light), var(--pink-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo span {
+  background: linear-gradient(
+    135deg,
+    var(--pink-primary),
+    var(--pink-secondary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigointi */
+nav {
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--pink-primary);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.mobile-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  padding: 5px;
+}
+
+/* Hero/Top-osio */
+.hero {
+  background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.9)),
+    url("Pics/backgroundphoto.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 150px 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: var(--pink-light);
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: var(--text-muted);
+}
+
+/* About-osio */
+.about {
+  padding: 100px 0;
+  background-color: #1a1a2e;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  color: var(--pink-light);
+  margin-bottom: 15px;
+}
+
+.section-title p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Projects-osio */
+.projects {
+  padding: 100px 0;
+  background-color: var(--darker-bg);
+}
+
+.project-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.project-intro p {
+  font-size: 18px;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--dark-bg);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid var(--pink-primary);
+}
+
+.project-card h3 {
+  margin-bottom: 15px;
+  color: var(--pink-light);
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-card .btn {
+  margin-top: auto;
+}
+
+/* Contact-osio */
+.contact {
+  padding: 80px 0;
+  min-height: auto;
+}
+
+.location-icon {
+  font-size: 16px;
+}
+
+.location-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+.location-label {
+  color: var(--pink-light);
+  font-weight: 600;
+}
+
+.social-links-centered {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--pink-primary);
+}
+
+.social-links-centered a:hover .social-icon {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
+}
+
+/* Footer */
+footer {
+  background-color: var(--darker-bg);
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsiivisuus */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    padding: 0 15px;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .about-text, .about-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--darker-bg);
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  nav ul.show {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+  
+  .hero {
+    padding: 100px 0;
+    min-height: 80vh;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+    padding: 0 15px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+  }
+  
+  .about,
+  .projects,
+  .contact {
+    padding: 60px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 28px;
+  }
+  
+  .about-text p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .project-card {
+    padding: 20px;
+  }
+  
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .contact {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+  
+  .hero {
+    padding: 80px 0;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .section-title h2 {
+    font-size: 24px;
+  }
+  
+  .project-card {
+    padding: 15px;
+  }
+  
+  .project-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
