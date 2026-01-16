@@ -171,5 +171,42 @@
         </div>
       </div>
     </footer>
+
+    <script>
+  // Mobiilivalikon toggle
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const navMenu = document.querySelector('nav ul');
+    
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+        // Vaihdetaan hamburger-ikoni
+        if (navMenu.classList.contains('show')) {
+          this.textContent = '✕';
+        } else {
+          this.textContent = '☰';
+        }
+      });
+    }
+    
+    // Suljetaan valikko kun linkkiä klikataan
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('show');
+        mobileMenuBtn.textContent = '☰';
+      });
+    });
+    
+    // Suljetaan valikko kun klikataan muualla
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('nav') && navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        mobileMenuBtn.textContent = '☰';
+      }
+    });
+  });
+</script>
   </body>
 </html>
